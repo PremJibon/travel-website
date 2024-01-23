@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+   :root {
+    --primary: #ff0185;
+    --secondary: #091126;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(145deg, var(--secondary), var(--primary));
+  }
+
+  .contact {
+    height: 70vh;
+    width: 75vw;
+    max-width: 800px; /* Adjusted maximum width for larger screens */
+    border-radius: 1rem;
+    display: flex;
+    box-shadow: 0 .2rem .5rem #0006;
+    overflow: hidden;
+  }
+
+  .map,
+  .form {
+    width: 100%; /* Full width for smaller screens */
+    height: 100%;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form {
+    position: relative;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .form::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -2.8rem;
+
+    width: 0;
+    height: 0;
+    border: 1.4rem solid transparent;
+    border-radius: 1.4rem solid var(--secondary);
+  }
+
+  .form h1 {
+    color: #fff;
+    font: 500 1.8rem sans-serif;
+    padding: 0 2rem;
+  }
+
+  .form form {
+    padding: 0 2rem;
+  }
+
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: .08rem solid var(--primary);
+    border-radius: 2rem;
+    background-color: unset;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .form input:not(:first-child),
+  .form textarea,
+  .form button {
+    margin-top: .8rem;
+  }
+
+  .form textarea {
+    height: 7rem;
+    resize: none;
+  }
+
+  .form button {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 2rem;
+    border: none;
+  }
+
+  .form button:hover {
+    color: var(--primary);
+    background-color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .contact {
+      width: 90%; /* Adjusted width for better responsiveness */
+    }
+
+    .form h1 {
+      font-size: 1.5rem; /* Adjusted font size for smaller screens */
+      padding: 0 1rem; /* Adjusted padding */
+    }
+
+    .form form {
+      padding: 0 1rem; /* Adjusted padding */
+    }
+
+    .form input,
+    .form textarea,
+    .form button {
+      font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="contact" data-aos="fade-left"
+  data-aos-anchor="#example-anchor"
+  data-aos-offset="500"
+  data-aos-duration="2000">
+    <div class="map">
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d231118.2517699276!2d54.8164972!3d25.1619577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sbd!4v1705166895563!5m2!1sen!2sbd"
+      style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="form">
+      <h1>Contact Us</h1>
+      <form action="https://formsubmit.co/dd2b8bd0f08f866a10b7cdaad662eed2" method="POST">
+        <input type="text" name="name" required placeholder="Name">
+        <input type="email" name="email" required placeholder="Email">
+        <input type="text" name="submit" required placeholder="Subject">
+        <textarea name="message" required placeholder="Message"></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com">
+        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+        <input type="hidden" name="_template" value="table">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
