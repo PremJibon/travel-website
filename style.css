@@ -8,6 +8,11 @@
 
     --max-width: 1200px;
 }
+
+body, html {
+    overflow-x: hidden;
+}
+
 /* Global btn */
 
 /* new header*/
